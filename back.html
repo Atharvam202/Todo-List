@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h2>Notes App</h2>
+    </nav>
+
+    <div class="container1">
+
+        <p class="title">Enter the title : </p>
+        <input type="text" id="note-title">
+        <p class="title">Enter your notes : </p>
+        <textarea name="notes" id="note-field" rows="4" cols="50"rows="80" cols="100"></textarea>
+    
+        <button type="submit" class="btn" onclick="save()" >save</button>
+        <button type="submit" class="btn" onclick="openPopup()" ><a href="save.html">submit</a></button>
+
+        
+
+        <div class="popup" id="popup">
+            <img src="tick.png" alt="">
+            <h2>Thank You!</h2>
+            <p>your details has been successfully submitted.thanks</p>
+            <button type="button" onclick="closePopup()"> ok </button>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+<script>
+    let popup = document.getElementById("popup");
+    function openPopup() {
+        popup.classList.add("open-popup");
+    }
+    function closePopup() {
+        popup.classList.remove("open-popup");
+    }
+</script>
+</html>

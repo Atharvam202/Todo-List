@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="delete">
+            <h2 class="prev_notes_heading"><h1>Saved Notes</h1></h2>
+        <button id="deleteBtn" type = "submit" class="btn" onclick="openPopup1()" >Delete</button>
+        </div>
+        <div class="popup" id="popup">
+            <img src="tick.png" alt="">
+            <h2>Thank You!</h2>
+            <p>your details has been successfully deleted.thanks</p>
+            <button type="button" onclick="closePopup()"> ok </button>
+        </div>
+
+        <!-- <p class="date_time">2nd october, 2000</p> -->
+        <div id="note-display"></div>
+    </div>
+</body>
+<script src="./script.js"></script>
+<script>
+    let popup = document.getElementById("popup");
+    function openPopup1() {
+        popup.classList.add("open-popup");
+    }
+    function closePopup() {
+        popup.classList.remove("open-popup");
+    }
+</script>
+</html>
